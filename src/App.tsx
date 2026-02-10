@@ -5,10 +5,11 @@ const App = () => {
     // return <div>App</div>;
     return (
         <div>
-            <h1>App</h1>
-            <Link to="/hotel_booking">Hotel Booking</Link>
+            <nav>
+                <Link to="/hotel_booking">Hotel Booking</Link>
+            </nav>
             <Routes>
-                <Route path="/about" element={<Hotel_booking />} />
+                <Route path="/hotel_booking" element={<Hotel_booking />} />
             </Routes>
         </div>
     );
