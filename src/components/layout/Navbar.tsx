@@ -1,13 +1,12 @@
 import { Search, SlidersHorizontal } from "lucide-react";
 import { useState } from "react";
-import { Twirl as Hamburger } from 'hamburger-react'
+import { Twirl as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../../assets/images/logo.png"
-import Avatar from "../../assets/images/Avatar.png"
+import logo from "../../assets/images/logo.png";
+import Avatar from "../../assets/images/Avatar.png";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
-
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
@@ -20,14 +19,11 @@ export default function Navbar() {
   return (
     <nav className="fixed left-0 top-0 w-full z-50 bg-white">
       <div className=" px-4 md:px-6 lg:px-16 py-2 flex justify-between items-center">
-
         <Link to="/" className="flex lg:flex-col items-center gap-1">
           <div className="w-10">
             <img src={logo} alt="logo" />
           </div>
-          <span className="font-semibold text-lg text-blue-600">
-            Safarni
-          </span>
+          <span className="font-semibold text-lg text-blue-600">Safarni</span>
         </Link>
 
         <div className="hidden md:flex space-x-6">
@@ -40,14 +36,16 @@ export default function Navbar() {
               {link.label}
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-
           ))}
         </div>
 
         <div className="flex items-center gap-1 lg:gap-5">
-          <div className="hover:bg-blue-200 rounded-full p-2 duration-300 cursor-pointer">
+          <Link
+            to={"/search"}
+            className="hover:bg-blue-200 rounded-full p-2 duration-300 cursor-pointer"
+          >
             <Search className="w-5 h-5 text-gray-600 " />
-          </div>
+          </Link>
           <div className="hover:bg-blue-200 rounded-full p-2 duration-300 cursor-pointer">
             <SlidersHorizontal className="w-5 h-5 text-gray-600 cursor-pointer" />
           </div>
@@ -57,7 +55,12 @@ export default function Navbar() {
             className="w-9 h-9 rounded-full object-cover cursor-pointer"
           />
           <div className="md:hidden">
-            <Hamburger size={25} color='gray' toggled={isOpen} toggle={setIsOpen} />
+            <Hamburger
+              size={25}
+              color="gray"
+              toggled={isOpen}
+              toggle={setIsOpen}
+            />
           </div>
         </div>
       </div>
