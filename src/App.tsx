@@ -1,13 +1,26 @@
-import Navbar from "./components/layout/Navbar";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
-import Search from "./pages/search/Search";
+import Root from "./components/layout/Root";
+import SearchPage from "./pages/search/Search";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/search",
+        element: <SearchPage />,
+      },
+    ],
+  },
+]);
 const App = () => {
-  return <div>
-    <Navbar />
-    <Search />
-    <Home />
-  </div>;
+  return <RouterProvider router={router} />;
 };
 
 export default App;
