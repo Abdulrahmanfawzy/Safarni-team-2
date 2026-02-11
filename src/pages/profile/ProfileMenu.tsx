@@ -18,7 +18,7 @@ function ProfileMenu() {
   const profile = useSelector((state: RootState) => state.profile);
 
   return (
-    <div className="flex flex-col gap-8 max-w-7xl mx-auto p-4">
+    <div className="flex flex-col gap-8 max-w-7xl mt-20 mx-auto p-4">
       <div className="gradient-border-single flex justify-start items-center gap-8 p-8">
         <div className="mr-4">
           <ProfileAvatar />

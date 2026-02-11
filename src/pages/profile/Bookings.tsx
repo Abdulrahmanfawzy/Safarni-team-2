@@ -4,7 +4,7 @@ import BackButton from "../../components/ui/BackButton";
 
 function Bookings() {
   return (
-    <div className="max-w-7xl flex flex-col items-center mx-auto p-4">
+    <div className="max-w-7xl mt-20 flex flex-col items-center mx-auto p-4">
       <BackButton />
       <div>
         <h1 className="text-center font-bold text-xl">My Booking</h1>

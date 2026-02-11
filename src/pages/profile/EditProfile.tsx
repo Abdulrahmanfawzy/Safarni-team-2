@@ -7,7 +7,7 @@ function EditProfile() {
   const profile = useSelector((state: RootState) => state.profile);
 
   return (
-    <div className="max-w-7xl mx-auto p-4">
+    <div className="max-w-7xl mx-auto mt-20 p-4">
       <BackButton />
       <div className="gradient-border-single p-8 rounded-2xl">
         <h1 className="text-center font-bold text-xl">Personal Information</h1>
