@@ -80,6 +80,33 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --primary-blue: #1e429f;
+  --secondary-blue: #ebf5ff;
+
+  /* Colors */
+  --primary: #1e429f;
+  --primary-hover: #1e439fef;
+  --border: #0069ab;
+
+  --white: #ffffff;
+  --light-gray: #f4f4f4;
+  --gray: #9ca3af;
+  --gray-second: #6b7280;
+  --gray-text: #4b5563;
+  --dark-gray: #373737;
+  --very-dark-gray: #111928;
+  --almost-black: #0d0d0d;
+
+  --error: #fb464f;
+  --error-focus: #fb465087;
+
+  --success: #31c48d;
+
+  /* Text Sizes */
+  --heading-1: 28px;
+  --subtitle: 21px;
+  --label: 18px;
+  --body-text: 16px;
 }
 
 .dark {
@@ -123,4 +150,13 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* profile page styles */
+.gradient-border-single {
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(90deg, #3f52b4, #b22459) border-box;
 }
