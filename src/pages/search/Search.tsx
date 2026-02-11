@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Recommendation from "./components/recommendation";
+import Recommendation from "./components/Recommendation";
 import SearchInput from "./components/SearchInput";
 import SearchResults from "./components/SearchResults";
 
