@@ -7,17 +7,16 @@ import leftImage from "../../assets/auth/new_ForgetPass.png";
 import Container from "../../components/common/Container";
 import NewPassForm from "../../components/auth/NewPassForm";
 import NavAuth from "../../components/auth/NavAuth";
+import Content from "../../components/common/Content";
 
 export default function NewPass() {
   return (
     <>
       <Container className="flex flex-col items-center h-screen justify-between">
         <NavAuth />
-        <div className="flex flex-row items-center gap-6 h-screen justify-between">
+        <Content>
           {/* Left Card */}
-          <div className="left-card max-w-[608px] h-full gap-4  flex flex-col justify-center ">
-            <LeftCard back={true} image={leftImage} imgInfo="Sign Up Image" />
-          </div>
+          <LeftCard back={true} image={leftImage} imgInfo="Sign Up Image" />
           {/* Right Card */}
           <RightCard>
             <div className="content flex flex-col gap-4 w-full">
@@ -33,7 +32,7 @@ export default function NewPass() {
               <NewPassForm />
             </div>
           </RightCard>
-        </div>
+        </Content>
       </Container>
     </>
   );

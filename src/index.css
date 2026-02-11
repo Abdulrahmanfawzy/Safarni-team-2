@@ -122,3 +122,30 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+:root {
+  /* Colors */
+  --primary: #1e429f;
+  --primary-hover: #1e439fef;
+  --border: #0069ab;
+
+  --white: #ffffff;
+  --light-gray: #f4f4f4;
+  --gray: #9ca3af;
+  --gray-second: #6b7280;
+  --gray-text: #4b5563;
+  --dark-gray: #373737;
+  --very-dark-gray: #111928;
+  --almost-black: #0d0d0d;
+
+  --error: #fb464f;
+  --error-focus: #fb465087;
+
+  --success: #31c48d;
+
+  /* Text Sizes */
+  --heading-1: 28px;
+  --subtitle: 21px;
+  --label: 18px;
+  --body-text: 16px;
+}

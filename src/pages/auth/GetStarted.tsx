@@ -8,20 +8,15 @@ import Container from "../../components/common/Container";
 import { Button } from "../../components/ui/button";
 import NavAuth from "../../components/auth/NavAuth";
 import { Link } from "react-router-dom";
+import Content from "../../components/common/Content";
 
 export default function GetStarted() {
   return (
     <Container className="flex flex-col items-center h-screen justify-between">
       <NavAuth />
-      <div className="flex flex-row items-center gap-6 h-screen justify-between">
+      <Content>
         {/* Left Card */}
-        <div className="left-card max-w-[608px] h-full flex flex-col justify-center ">
-          <LeftCard
-            back={false}
-            image={leftImage}
-            imgInfo="Get Started Image"
-          />
-        </div>
+        <LeftCard back={false} image={leftImage} imgInfo="Get Started Image" />
         {/* Right Card */}
         <RightCard>
           <div className="content flex flex-col gap-6">
@@ -49,7 +44,7 @@ export default function GetStarted() {
             </div>
           </div>
         </RightCard>
-      </div>
+      </Content>
     </Container>
   );
 }
