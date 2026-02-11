@@ -1,5 +1,10 @@
+import FavoritesPage from './components/pages/Favorites/Page';
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div className="w-full">
+      <FavoritesPage />
+    </div>
+  );
 };
 
 export default App;
