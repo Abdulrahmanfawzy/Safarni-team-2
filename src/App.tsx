@@ -5,6 +5,7 @@ import SearchPage from "./pages/search/Search";
 import ProfileMenu from "./pages/profile/ProfileMenu";
 import EditProfile from "./pages/profile/EditProfile";
 import Bookings from "./pages/profile/Bookings";
+import FavoritesPage from "./components/pages/Favorites/Page";
 import GetStarted from "./pages/auth/GetStarted";
 import LogIn from "./pages/auth/LogIn";
 import SignUp from "./pages/auth/SignUp";
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
       {
         path: "/profile/edit",
         element: <EditProfile />,
+      },
+
+      {
+        path: "/favorite",
+        element: <FavoritesPage />,
       },
     ],
   },
@@ -73,5 +79,4 @@ const router = createBrowserRouter([
 const App = () => {
   return <RouterProvider router={router} />;
 };
-
 export default App;
