@@ -5,6 +5,13 @@ import SearchPage from "./pages/search/Search";
 import ProfileMenu from "./pages/profile/ProfileMenu";
 import EditProfile from "./pages/profile/EditProfile";
 import Bookings from "./pages/profile/Bookings";
+import GetStarted from "./pages/auth/GetStarted";
+import LogIn from "./pages/auth/LogIn";
+import SignUp from "./pages/auth/SignUp";
+import ForgetPass from "./pages/auth/ForgetPass";
+import Otp from "./pages/auth/Otp";
+import NewPass from "./pages/auth/NewPass";
+import Done from "./components/auth/Done";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +40,34 @@ const router = createBrowserRouter([
       },
     ],
   },
-  {},
+  {
+    path: "get-started",
+    element: <GetStarted />,
+  },
+  {
+    path: "login",
+    element: <LogIn />,
+  },
+  {
+    path: "signup",
+    element: <SignUp />,
+  },
+  {
+    path: "forget-pass",
+    element: <ForgetPass />,
+  },
+  {
+    path: "otp",
+    element: <Otp />,
+  },
+  {
+    path: "new-pass",
+    element: <NewPass />,
+  },
+  {
+    path: "done",
+    element: <Done />,
+  },
 ]);
 const App = () => {
   return <RouterProvider router={router} />;
