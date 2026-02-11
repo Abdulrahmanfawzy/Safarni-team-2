@@ -4,7 +4,7 @@ import { favoritesData } from './data';
 
 const FavoritesPage = () => {
     return (
-        <div className="w-full min-h-screen bg-[#F8F9FB] pb-10">
+        <div className="mt-20 w-full min-h-screen bg-[#F8F9FB] pb-10">
             <div className="max-w-7xl mx-auto px-6 pt-8 pb-6">
                 <div className="flex items-center justify-between mb-8">
                     <button className="p-2 bg-white rounded-full shadow-sm hover:bg-gray-50 border border-gray-100 transition-all">

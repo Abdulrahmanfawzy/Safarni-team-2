@@ -43,7 +43,7 @@ export const favoritesData: TravelItem[] = [
     isFavorite: true
   },
 
-   {
+    {
     id: 4,
     image: "src/assets/img4.jpeg",
     title: "Eiffel Tower",
@@ -53,4 +53,49 @@ export const favoritesData: TravelItem[] = [
     price: 1050,
     isFavorite: true
   },
+
+   {
+    id: 5,
+    image: "src/assets/img5.jpg",
+    title: "Notre-Dame Cathedral",
+    rating: 4.2,
+    reviews: 650,
+    duration: "",
+    price: 250,
+    isFavorite: true
+  },
+
+    {
+    id: 6,
+    image: "src/assets/img6.jpg",
+    title: "Galeries Lafayette",
+    rating: 4.5,
+    reviews: 650,
+    duration: "",
+    price: 150,
+    isFavorite: true
+  },
+
+    {
+    id: 7,
+    image: "src/assets/img7.jpg",
+    title: "Eiffel Tower",
+    rating: 4.5,
+    reviews: 650,
+    duration: "",
+    price: 200,
+    isFavorite: true
+  },
+
+    {
+    id: 8,
+    image: "src/assets/img8.jpg",
+    title: "Bois de Boulogne",
+    rating: 4.7,
+    reviews: 650,
+    duration: "",
+    price: 200,
+    isFavorite: true
+  },
+
 ];
