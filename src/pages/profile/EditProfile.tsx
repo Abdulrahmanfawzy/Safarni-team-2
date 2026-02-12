@@ -16,7 +16,7 @@ function EditProfile() {
           Name
           <input
             type="text"
-            className="border p-2 rounded"
+            className="text-(--gray) outline p-2 rounded"
             placeholder="First Name"
             value={profile.firstName}
           />
@@ -24,7 +24,7 @@ function EditProfile() {
           Email
           <input
             type="text"
-            className="border p-2 rounded"
+            className="text-(--gray) outline p-2 rounded"
             placeholder="Email"
             value={profile.email}
           />
@@ -32,7 +32,7 @@ function EditProfile() {
           Location
           <input
             type="text"
-            className="border p-2 rounded"
+            className="text-(--gray) outline p-2 rounded"
             placeholder="ex: Cairo, Egypt"
             value={profile.location}
           />
@@ -40,7 +40,7 @@ function EditProfile() {
           Phone Number
           <input
             type="text"
-            className="border p-2 rounded"
+            className="text-(--gray) outline p-2 rounded"
             placeholder="ex: +201234567890"
             value={profile.phoneNumber}
           />

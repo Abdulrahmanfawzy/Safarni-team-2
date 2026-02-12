@@ -1,14 +1,15 @@
 import { Button } from "../../components/ui/button";
 import {
   ChevronRight,
-  Globe,
   Lock,
   LogOut,
   PanelTop,
   UserRoundPen,
 } from "lucide-react";
+import { useState } from "react";
 
 import ProfileAvatar from "./_components/ProfileAvatar";
+import Modal from "../../components/common/Modal";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import type { RootState } from "../../store";
@@ -16,6 +17,7 @@ import type { RootState } from "../../store";
 function ProfileMenu() {
   const navigate = useNavigate();
   const profile = useSelector((state: RootState) => state.profile);
+  const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
 
   return (
     <div className="flex flex-col gap-8 max-w-7xl mt-20 mx-auto p-4">
@@ -31,8 +33,8 @@ function ProfileMenu() {
       <div className="gradient-border-single p-8 rounded-2xl">
         <div className=" flex flex-col gap-6">
           <Button
-            variant="outline"
-            className="w-full cursor-pointer flex p-6 items-center justify-between"
+            variant="ghost"
+            className="w-full shadow cursor-pointer flex p-6 items-center justify-between"
             onClick={() => navigate("edit")}
           >
             <div className="flex  items-center justify-start gap-2">
@@ -44,8 +46,8 @@ function ProfileMenu() {
             </div>
           </Button>
           <Button
-            variant="outline"
-            className="w-full cursor-pointer flex p-6 items-center justify-between"
+            variant="ghost"
+            className="w-full shadow cursor-pointer flex p-6 items-center justify-between"
             onClick={() => navigate("bookings")}
           >
             <div className="flex items-center justify-start gap-2">
@@ -56,23 +58,11 @@ function ProfileMenu() {
               <ChevronRight />
             </div>
           </Button>
+
           <Button
-            variant="outline"
-            className="w-full cursor-pointer flex p-6 items-center justify-between"
-            onClick={() => navigate("language")}
-          >
-            <div className="flex items-center justify-start gap-2">
-              <Globe />
-              <span>App Language</span>
-            </div>
-            <div>
-              <ChevronRight />
-            </div>
-          </Button>
-          <Button
-            variant="outline"
-            className="w-full cursor-pointer flex p-6 items-center justify-between"
-            onClick={() => navigate("account-security")}
+            variant="ghost"
+            className="w-full shadow cursor-pointer flex p-6 items-center justify-between"
+            onClick={() => navigate("security")}
           >
             <div className="flex items-center justify-start gap-2">
               <Lock />
@@ -83,8 +73,9 @@ function ProfileMenu() {
             </div>
           </Button>
           <Button
-            variant="outline"
-            className="w-full cursor-pointer flex p-6 items-center justify-between"
+            variant="ghost"
+            className="w-full shadow cursor-pointer flex p-6 items-center justify-between"
+            onClick={() => setIsLogoutModalOpen(true)}
           >
             <div className="flex items-center text-red-600 justify-start gap-2">
               <LogOut />
@@ -96,6 +87,35 @@ function ProfileMenu() {
           </Button>
         </div>
       </div>
+
+      <Modal
+        open={isLogoutModalOpen}
+        onClose={() => setIsLogoutModalOpen(false)}
+      >
+        <div className="flex flex-col gap-6">
+          <p className="text-center text-xl">
+            Do You Want To Register The Exit Already ?
+          </p>
+          <div className="flex gap-3 justify-center">
+            <Button
+              className="flex-1 cursor-pointer"
+              onClick={() => {
+                setIsLogoutModalOpen(false);
+                // TODO: Add logout logic here
+              }}
+            >
+              Yes, Log me Out
+            </Button>
+            <Button
+              variant="outline"
+              className="flex-1 cursor-pointer"
+              onClick={() => setIsLogoutModalOpen(false)}
+            >
+              No
+            </Button>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 }
