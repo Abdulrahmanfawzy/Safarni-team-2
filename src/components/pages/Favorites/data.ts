@@ -12,7 +12,7 @@ export interface TravelItem {
 export const favoritesData: TravelItem[] = [
     {
         id: 1,
-        image: "src/assets/img1.jpeg",
+        image: "src/assets/Favorite Page/img1.jpeg",
         title: "Paris City Tour",
         rating: 4.1,
         reviews: 880,
@@ -23,7 +23,7 @@ export const favoritesData: TravelItem[] = [
 
     {
         id: 2,
-        image: "src/assets/img2.jpeg",
+        image: "src/assets/Favorite Page/img2.jpeg",
         title: "Disneyland Paris",
         rating: 4.5,
         reviews: 650,
@@ -34,7 +34,7 @@ export const favoritesData: TravelItem[] = [
 
      {
     id: 3,
-    image: "src/assets/img3.jpeg",
+    image: "src/assets/Favorite Page/img3.jpeg",
     title: "River Cruises",
     rating: 4.0,
     reviews: 350,
@@ -45,7 +45,7 @@ export const favoritesData: TravelItem[] = [
 
     {
     id: 4,
-    image: "src/assets/img4.jpeg",
+    image: "src/assets/Favorite Page/img4.jpeg",
     title: "Eiffel Tower",
     rating: 4.5,
     reviews: 650,
@@ -56,7 +56,7 @@ export const favoritesData: TravelItem[] = [
 
    {
     id: 5,
-    image: "src/assets/img5.jpg",
+    image: "src/assets/Favorite Page/img5.jpg",
     title: "Notre-Dame Cathedral",
     rating: 4.2,
     reviews: 650,
@@ -67,7 +67,7 @@ export const favoritesData: TravelItem[] = [
 
     {
     id: 6,
-    image: "src/assets/img6.jpg",
+    image: "src/assets/Favorite Page/img6.jpg",
     title: "Galeries Lafayette",
     rating: 4.5,
     reviews: 650,
@@ -78,7 +78,7 @@ export const favoritesData: TravelItem[] = [
 
     {
     id: 7,
-    image: "src/assets/img7.jpg",
+    image: "src/assets/Favorite Page/img7.jpg",
     title: "Eiffel Tower",
     rating: 4.5,
     reviews: 650,
@@ -89,7 +89,7 @@ export const favoritesData: TravelItem[] = [
 
     {
     id: 8,
-    image: "src/assets/img8.jpg",
+    image: "src/assets/Favorite Page/img8.jpg",
     title: "Bois de Boulogne",
     rating: 4.7,
     reviews: 650,

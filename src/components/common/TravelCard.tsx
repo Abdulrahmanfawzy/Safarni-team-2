@@ -20,7 +20,7 @@ export const TravelCard = ({ item }: { item: TravelItem }) => (
                 <h3 className="font-bold text-[#1A1A1A] text-[16px] leading-tight tracking-tight">
                     {item.title}
                 </h3>
-                <div className="flex items-center gap-1 shrink-0">
+                <div className="flex items-center gap-1 shrink-0 ">
                     <Star className="w-5 h-5 fill-[#FFB347] text-[#FFB347]" />
                     <span className="text-base font-bold text-[#4D4D4D]">{item.rating.toFixed(1)}</span>
                     {item.reviews && <span className="text-sm text-[#999999]">({item.reviews})</span>}
