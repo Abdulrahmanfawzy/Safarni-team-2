@@ -19,7 +19,8 @@ import Hotel_booking from "./pages/hotel_booking/page";
 import Hotel_details from "./pages/hotel_booking/hotel_details/page";
 import Available_rooms from "./pages/hotel_booking/available_rooms/page";
 import Booking from "./pages/hotel_booking/hotel_details/booking/page";
-import PaymentMethod from "./components/pages/payment/PaymentSection";
+import PaymentPage from "./components/pages/payment/PaymentPage";
+import PaymentSuccess from "./components/pages/payment/PaymentSuccess";
 
 const router = createBrowserRouter([
   {
@@ -40,8 +41,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/payment",
-        element: <PaymentMethod />,
+        element: <PaymentPage />,
       },
+      {
+        path: "/payment/success",
+        element: <PaymentSuccess />,
+      },
+
       {
         path: "/profile",
         element: <ProfileMenu />,
