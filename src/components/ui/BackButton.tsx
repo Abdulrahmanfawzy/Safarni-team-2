@@ -6,7 +6,7 @@ function BackButton() {
   const navigate = useNavigate();
   return (
     <Button
-      variant="outline"
+      variant="ghost"
       className="rounded-full h-15 w-15 mb-8 cursor-pointer self-start bg-[#F3F4F6]"
       onClick={() => navigate(-1)}
     >

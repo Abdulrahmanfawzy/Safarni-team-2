@@ -1,4 +1,4 @@
-import type { ProfileData } from "./types";
+import type { ProfileData } from "../types";
 
 export const mockProfileData: ProfileData = {
   firstName: "Toji",
