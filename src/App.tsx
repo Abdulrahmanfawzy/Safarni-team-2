@@ -13,6 +13,7 @@ import ForgetPass from "./pages/auth/ForgetPass";
 import Otp from "./pages/auth/Otp";
 import NewPass from "./pages/auth/NewPass";
 import Done from "./components/auth/Done";
+import AccountSecurity from "./pages/profile/AccountSecurity";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/profile/edit",
         element: <EditProfile />,
+      },
+      {
+        path: "/profile/security",
+        element: <AccountSecurity />,
       },
 
       {
