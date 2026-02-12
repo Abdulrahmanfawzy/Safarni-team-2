@@ -17,13 +17,13 @@ export default function Destination() {
     imageSrc: MainImg,
   };
   return (
-    <div className="max-w-7xl mx-auto px-4 lg:px-25 py-8">
+    <section className="max-w-7xl mx-auto px-4 lg:px-25 py-8">
       <ChevronLeft className="w-8 h-8 bg-[#F3F4F6] rounded-full cursor-pointer mb-8" />
       <TravelCard {...destinationData} />
       <TopActivates />
       <VisitingTime />
       <Gallery />
       <BookingBar />
-    </div>
+    </section>
   );
 }

@@ -13,7 +13,7 @@ const BookingBar = () => {
           <span className="text-[14px] text-[#6B7280]">/night</span>
         </div>
 
-        <button className="bg-[#1E429F] hover:bg-blue-800 text-white font-bold py-3 px-12 rounded-[8px] transition-colors duration-200">
+        <button className="bg-(--primary-blue) hover:bg-blue-800 text-white font-bold py-3 px-12 rounded-[8px] transition-colors duration-200">
           Book Now
         </button>
       </div>
