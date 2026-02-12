@@ -1,36 +1,66 @@
 import { Skeleton } from "../../components/ui/skeleton";
-import { Star } from "lucide-react";
-import { MapPin } from "lucide-react";
+import { Star, MapPin } from "lucide-react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function HotelCardRec({ product }: { product: any }) {
+    const [imgLoaded, setImgLoaded] = useState(false);
+
     return (
-        <div
-            style={{ boxShadow: "0 0 26.37px 0 #6F6F6F40" }}
-            className="p-2 rounded-2xl lg:w-2/10 md:w-5/12 w-full grid justify-between gap-2 cursor-pointer items-center"
+        <Link
+            to={`/availableRooms/products/${product.category}`}
+            className="relative bg-white rounded-3xl overflow-hidden 
+                       shadow-md hover:shadow-xl 
+                       transition-all duration-300 
+                       hover:-translate-y-1 
+                       lg:w-[23%] md:w-[48%] w-full"
         >
-            {product.thumbnail ? (
+            {/* Image Wrapper */}
+            <div className="relative w-full h-52">
+                {!imgLoaded && (
+                    <Skeleton className="absolute inset-0 rounded-none bg-gray-200 animate-pulse" />
+                )}
+
                 <img
                     src={product.thumbnail}
-                    className="rounded-2xl"
                     alt={product.title}
+                    onLoad={() => setImgLoaded(true)}
+                    className={`w-full h-full object-cover transition-opacity duration-500 ${
+                        imgLoaded ? "opacity-100" : "opacity-0"
+                    }`}
                 />
-            ) : (
-                <Skeleton className="h-52 w-full rounded-2xl bg-gray-200 animate-pulse" />
-            )}
-            <div className="flex justify-between w-full px-2">
-                <span className="bg-[#EBF5FF] text-[#1E429F] text-[14px] rounded-2xl px-3 py-1">
+
+                {/* Discount Badge */}
+                <span className="absolute top-3 left-3 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full px-3 py-1">
                     %{Math.round(product.discountPercentage)} Off
                 </span>
-                <div className="flex gap-1">
-                    <Star fill="#FACC15" className="text-[#FACC15]" />
-                    <p className="">{product.rating}</p>
-                </div>
             </div>
-            <h3 className="self-start px-2">{product.title}</h3>
-            <p className="text-gray-400 flex gap-2 justify-start items-center self-start">
-                <MapPin />
-                {product.category}
-            </p>
-        </div>
+
+            {/* Content */}
+            <div className="p-4 space-y-2">
+                {/* Rating */}
+                <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-1 text-sm font-medium">
+                        <Star
+                            size={16}
+                            fill="#FACC15"
+                            className="text-[#FACC15]"
+                        />
+                        <span>{product.rating}</span>
+                    </div>
+                </div>
+
+                {/* Title */}
+                <h3 className="font-semibold text-lg line-clamp-1">
+                    {product.title}
+                </h3>
+
+                {/* Location */}
+                <p className="text-gray-500 flex items-center gap-1 text-sm">
+                    <MapPin size={16} />
+                    {product.category}
+                </p>
+            </div>
+        </Link>
     );
 }
