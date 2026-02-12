@@ -18,6 +18,7 @@ import Hotel_booking from "./pages/hotel_booking/page";
 import Hotel_details from "./pages/hotel_booking/hotel_details/page";
 import Available_rooms from "./pages/hotel_booking/available_rooms/page";
 import Booking from "./pages/hotel_booking/hotel_details/booking/page";
+import PaymentMethod from "./components/pages/payment/PaymentSection";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/destination",
         element: <Destination />,
+      },
+      {
+        path: "/payment",
+        element: <PaymentMethod />,
       },
       {
         path: "/profile",
