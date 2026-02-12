@@ -1,8 +1,8 @@
 import React from "react";
-import actvity1 from "../../assets/images/activity-1.png";
-import actvity2 from "../../assets/images/activity-2.png";
-import actvity3 from "../../assets/images/activity-3.png";
-import actvity4 from "../../assets/images/activity-4.png";
+import actvity1 from "../../../assets/images/activity-1.png";
+import actvity2 from "../../../assets/images/activity-2.png";
+import actvity3 from "../../../assets/images/activity-3.png";
+import actvity4 from "../../../assets/images/activity-4.png";
 
 const activities = [
   {

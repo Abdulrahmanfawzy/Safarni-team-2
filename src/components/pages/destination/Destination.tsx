@@ -1,7 +1,7 @@
 import React from "react";
 import { ChevronLeft } from "lucide-react";
 import TravelCard from "./TravelCard";
-import MainImg from "../../assets/images/eiffeltower.png";
+import MainImg from "../../../assets/images/destination-main.png";
 import TopActivates from "./TopActivates";
 import VisitingTime from "./VisitingTime";
 import Gallery from "./Gallarey";

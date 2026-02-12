@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Root from "./components/layout/Root";
 import SearchPage from "./pages/search/Search";
-import Destination from "./components/pages/Destination";
+import Destination from "./components/pages/destination/Destination";
 import ProfileMenu from "./pages/profile/ProfileMenu";
 import EditProfile from "./pages/profile/EditProfile";
 import Bookings from "./pages/profile/Bookings";

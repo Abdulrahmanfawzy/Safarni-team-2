@@ -1,5 +1,5 @@
 import React from "react";
-import TourGallery from "../../assets/images/tour-gallery-7.png";
+import TourGallery from "../../../assets/images/tour-gallery-7.png";
 
 const Gallery = () => {
   const images = Array(12).fill(TourGallery);

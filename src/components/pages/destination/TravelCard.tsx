@@ -1,6 +1,6 @@
 import React from "react";
 import { Star, MapPin, Calendar, Camera } from "lucide-react";
-import { Card, CardContent } from "../ui/card";
+import { Card, CardContent } from "../../ui/card";
 
 // Interface representing the data structure from your API
 interface DestinationProps {
