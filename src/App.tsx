@@ -20,8 +20,6 @@ import Available_rooms from "./pages/hotel_booking/available_rooms/page";
 import Booking from "./pages/hotel_booking/hotel_details/booking/page";
 import PaymentPage from "./components/pages/payment/PaymentPage";
 import PaymentSuccess from "./components/pages/payment/PaymentSuccess";
-// import PaymentSection from "./components/pages/payment/AddPayment";
-// import AddPayment from "./components/pages/payment/AddPayment";
 
 const router = createBrowserRouter([
   {
