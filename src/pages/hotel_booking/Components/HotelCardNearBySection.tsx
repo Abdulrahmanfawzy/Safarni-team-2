@@ -1,4 +1,4 @@
-import { Skeleton } from "../../components/ui/skeleton";
+import { Skeleton } from "../../../components/ui/skeleton";
 import { Star, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 

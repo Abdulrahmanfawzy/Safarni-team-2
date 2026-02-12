@@ -3,9 +3,11 @@ import Navbar from "./Navbar";
 
 function Root() {
   return (
-    <div className="lg:py-14 md:py-10">
+    <div>
       <Navbar />
-      <Outlet />
+      <div className="mt-16 md:mt-24">
+        <Outlet />
+      </div>
     </div>
   );
 }

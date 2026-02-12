@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import HotelCardRec from "./Components/HotelCardRec";
 import HotelCardNearBySection from "./Components/HotelCardNearBySection";
-import { Skeleton } from "../components/ui/skeleton";
+import { Skeleton } from "../../components/ui/skeleton";
 async function fetchHotels(limit: number) {
     const res = await fetch(`https://dummyjson.com/products?limit=100&skip=10`);
     return res.json();

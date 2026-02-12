@@ -1,6 +1,6 @@
 import HotelCardsAvailable from "../Components/HotelCardsAvailable";
 import { useQuery } from "@tanstack/react-query";
-import { Skeleton } from "../../components/ui/skeleton";
+import { Skeleton } from "../../../components/ui/skeleton";
 import { useNavigate, useParams } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
 
@@ -17,7 +17,7 @@ export default function Available_rooms() {
         },
         enabled: !!category,});
     return (
-        <section>
+        <section className="lg:px-12 md:px-8 px-4">
             <button onClick={()=>navigate(-1)} className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer">
                 <ChevronLeft />
             </button>
