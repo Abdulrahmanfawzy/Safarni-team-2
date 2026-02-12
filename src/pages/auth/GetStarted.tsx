@@ -21,10 +21,10 @@ export default function GetStarted() {
         <RightCard>
           <div className="content flex flex-col gap-6">
             <div className="welcome flex flex-col items-center gap-4">
-              <h1 className="font-medium text-[26px] text-center text-[#111928]">
+              <h1 className="font-medium text-[28px] text-center text-[#111928]">
                 Welcome Again
               </h1>
-              <p className="text-center max-w-[510px] text-[20px] font-normal text-[#4B5563]">
+              <p className="text-center max-w-[510px] text-[21px] font-normal text-[#4B5563]">
                 Safarni is your all-in-one travel guide. Discover destinations,
                 compare trip prices, book flights, hotels, car rentals, and
                 local tours — all through one interactive experience.

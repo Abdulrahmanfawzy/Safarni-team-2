@@ -10,6 +10,7 @@ import NavAuth from "../../components/auth/NavAuth";
 import Content from "../../components/common/Content";
 
 export default function SignUp() {
+  
   return (
     <>
       <Container className="flex flex-col items-center h-screen justify-between">

@@ -9,8 +9,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+// import { useRegister } from "../../hooks/authHooks";
 
 export default function SignupForm() {
+  // const { mutate } = useRegister();
   const [showPassword, setShowPassword] = useState(false);
   const {
     register,
@@ -19,6 +21,7 @@ export default function SignupForm() {
   } = useForm({
     resolver: zodResolver(signupSchema),
   });
+
   const onSubmit = (data: z.infer<typeof signupSchema>) => {
     console.log(data);
   };
