@@ -1,11 +1,11 @@
 import { ChevronLeft, Star } from "lucide-react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
-} from "../../../components/ui/carousel";
+} from "../../../../components/ui/carousel";
 import InputFieldComponent from "./Components/InputFieldComponent";
 import LastCheckOut from "./Components/LastCheckOut";
 import { useState } from "react";

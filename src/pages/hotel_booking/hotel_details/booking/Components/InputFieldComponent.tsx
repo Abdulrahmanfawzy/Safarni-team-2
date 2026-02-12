@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import {
     Field,
     FieldLabel,
-} from "../../../../components/ui/field";
+} from "../../../../../components/ui/field";
 import {
     InputGroup,
     InputGroupAddon,
     InputGroupText,
     InputGroupTextarea,
-} from "../../../../components/ui/input-group";
+} from "../../../../../components/ui/input-group";
 
 export default function InputFieldComponent() {
     const [text, setText] = useState("");

@@ -13,10 +13,10 @@ import ForgetPass from "./pages/auth/ForgetPass";
 import Otp from "./pages/auth/Otp";
 import NewPass from "./pages/auth/NewPass";
 import Done from "./components/auth/Done";
-import Hotel_booking from "./hotel_booking/page";
-import Hotel_details from "./hotel_booking/hotel_details/page";
-import Available_rooms from "./hotel_booking/available_rooms/page";
-import Booking from "./hotel_booking/hotel_details/booking/page";
+import Hotel_booking from "./pages/hotel_booking/page";
+import Hotel_details from "./pages/hotel_booking/hotel_details/page";
+import Available_rooms from "./pages/hotel_booking/available_rooms/page";
+import Booking from "./pages/hotel_booking/hotel_details/booking/page";
 
 
 const router = createBrowserRouter([

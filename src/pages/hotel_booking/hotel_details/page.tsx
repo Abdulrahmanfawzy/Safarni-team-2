@@ -6,14 +6,14 @@ import {
     TabsContent,
     TabsList,
     TabsTrigger,
-} from "../../components/ui/tabsForHotels";
+} from "../../../components/ui/tabsForHotels";
 import { useState } from "react";
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
-} from "../../components/ui/carousel";
-import { Skeleton } from "../../components/ui/skeleton";
+} from "../../../components/ui/carousel";
+import { Skeleton } from "../../../components/ui/skeleton";
 export default function Hotel_details() {
     const [loadedImages, setLoadedImages] = useState<number[]>([]);
 
