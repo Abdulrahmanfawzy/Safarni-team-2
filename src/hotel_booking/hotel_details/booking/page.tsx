@@ -54,32 +54,36 @@ export default function Booking() {
 
     return (
         <section className="lg:px-12 md:px-8 px-4 py-10 ">
-            <button onClick={()=>navigate(-1)} className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer">
+            <button
+                onClick={() => navigate(-1)}
+                className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer"
+            >
                 <ChevronLeft />
             </button>
 
             <div className="mt-4 flex justify-center lg:gap-15 md:gap-10 gap-5 items-start flex-wrap">
                 <div className="lg:w-5/12 md:w-8/12 w-full relative">
                     {data?.thumbnail && (
-                        <img
-                            src={data.thumbnail}
-                            alt={data.title}
-                            className="rounded-2xl w-full "
-                        />
+                        <>
+                            <img
+                                src={data.thumbnail}
+                                alt={data.title}
+                                className="rounded-2xl w-full"
+                            />
+
+                            <div className="md:grid hidden grid-cols-5 w-full bg-white rounded-2xl p-3 absolute bottom-0 left-1/2 -translate-x-1/2 gap-5">
+                                {Array.from({ length: 5 }).map((_, index) => (
+                                    <img
+                                        key={index}
+                                        src={data.thumbnail}
+                                        alt={data.title}
+                                        className="rounded-2xl w-full cursor-pointer"
+                                    />
+                                ))}
+                            </div>
+                        </>
                     )}
                 </div>
-                {data?.thumbnail && (
-                        <div className="md:grid hidden grid-cols-5 w-125 bg-white rounded-2xl p-3 fixed bottom-10 left-1/4 -translate-x-1/3  gap-5">
-                            {Array.from({ length: 5 }).map((_, index) => (
-                                <img
-                                    key={index}
-                                    src={data.thumbnail}
-                                    alt={data.title}
-                                    className="rounded-2xl w-full cursor-pointer"
-                                />
-                            ))}
-                        </div>
-                    )}
 
                 <div className="lg:w-5/12 md:w-4/12 w-full flex flex-col">
                     <div className="flex justify-between">
