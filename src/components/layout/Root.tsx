@@ -5,7 +5,9 @@ function Root() {
   return (
     <div>
       <Navbar />
-      <Outlet />
+      <div className="mt-16 md:mt-24">
+        <Outlet />
+      </div>
     </div>
   );
 }

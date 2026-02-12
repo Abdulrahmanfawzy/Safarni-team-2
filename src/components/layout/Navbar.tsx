@@ -49,11 +49,14 @@ export default function Navbar() {
           <div className="hover:bg-blue-200 rounded-full p-2 duration-300 cursor-pointer">
             <SlidersHorizontal className="w-5 h-5 text-gray-600 cursor-pointer" />
           </div>
-          <img
-            src={Avatar}
-            alt="user"
-            className="w-9 h-9 rounded-full object-cover cursor-pointer"
-          />
+          <Link to="/profile">
+            <img
+              src={Avatar}
+              alt="user"
+              className="w-9 h-9 rounded-full object-cover cursor-pointer"
+            />
+          </Link>
+
           <div className="md:hidden">
             <Hamburger
               size={25}
