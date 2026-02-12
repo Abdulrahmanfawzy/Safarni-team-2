@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 function Root() {
   return (
-    <div>
+    <div className="lg:py-14 md:py-10">
       <Navbar />
       <Outlet />
     </div>

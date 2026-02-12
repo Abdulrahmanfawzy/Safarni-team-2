@@ -13,6 +13,11 @@ import ForgetPass from "./pages/auth/ForgetPass";
 import Otp from "./pages/auth/Otp";
 import NewPass from "./pages/auth/NewPass";
 import Done from "./components/auth/Done";
+import Hotel_booking from "./hotel_booking/page";
+import Hotel_details from "./hotel_booking/hotel_details/page";
+import Available_rooms from "./hotel_booking/available_rooms/page";
+import Booking from "./hotel_booking/hotel_details/booking/page";
+
 
 const router = createBrowserRouter([
   {
@@ -43,6 +48,22 @@ const router = createBrowserRouter([
       {
         path: "/favorite",
         element: <FavoritesPage />,
+      },
+      {
+        path: "/hotel_booking",
+        element: <Hotel_booking />,
+      },
+      {
+        path: "/hotel_details/:id",
+        element: <Hotel_details />,
+      },
+      {
+        path: "/hotel_details/:id/booking",
+        element: <Booking />,
+      },
+      {
+        path: "/availableRooms/products/:category",
+        element: <Available_rooms />,
       },
     ],
   },
