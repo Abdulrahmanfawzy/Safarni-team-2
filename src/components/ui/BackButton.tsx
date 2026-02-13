@@ -7,7 +7,7 @@ function BackButton() {
   return (
     <Button
       variant="ghost"
-      className="rounded-full h-15 w-15 mb-8 cursor-pointer self-start bg-[#F3F4F6]"
+      className="rounded-full h-12 w-12 mb-4 cursor-pointer self-start bg-[#F3F4F6]"
       onClick={() => navigate(-1)}
     >
       <ChevronLeft />

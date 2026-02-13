@@ -12,8 +12,8 @@ function Bookings() {
   const [activeTab, setIsActiveTab] = useState<BookingType>("flight");
   return (
     <div className="w-full mt-16 sm:mt-20 flex flex-col items-center mx-auto px-4 sm:px-4 pb-8">
-      <BackButton />
       <div className="w-full max-w-7xl">
+        <BackButton />
         <h1 className="text-center font-bold text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6">
           My Booking
         </h1>
