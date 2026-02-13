@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Root from "./components/layout/Root";
 import SearchPage from "./pages/search/Search";
+import Destination from "./components/pages/destination/Destination";
 import ProfileMenu from "./pages/profile/ProfileMenu";
 import EditProfile from "./pages/profile/EditProfile";
 import Bookings from "./pages/profile/Bookings";
@@ -14,8 +15,15 @@ import ForgetPass from "./pages/auth/ForgetPass";
 import Otp from "./pages/auth/Otp";
 import NewPass from "./pages/auth/NewPass";
 import Done from "./components/auth/Done";
-import ResultPage from "./components/common/Result";
+import AccountSecurity from "./pages/profile/AccountSecurity";
+import Hotel_booking from "./pages/hotel_booking/page";
+import Hotel_details from "./pages/hotel_booking/hotel_details/page";
+import Available_rooms from "./pages/hotel_booking/available_rooms/page";
+import Booking from "./pages/hotel_booking/hotel_details/booking/page";
+import PaymentPage from "./components/pages/payment/PaymentPage";
+import PaymentSuccess from "./components/pages/payment/PaymentSuccess";
 import FilterPage from "./pages/filter/Filter";
+import ResultPage from "./components/common/Result";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +53,19 @@ const router = createBrowserRouter([
     element: <ProfileLayout />,
     children: [
       {
+        path: "/destination",
+        element: <Destination />,
+      },
+      {
+        path: "/payment",
+        element: <PaymentPage />,
+      },
+      {
+        path: "/payment/success",
+        element: <PaymentSuccess />,
+      },
+
+      {
         path: "/profile",
         element: <ProfileMenu />,
       },
@@ -56,10 +77,30 @@ const router = createBrowserRouter([
         path: "/profile/edit",
         element: <EditProfile />,
       },
+      {
+        path: "/profile/security",
+        element: <AccountSecurity />,
+      },
 
       {
         path: "/profile/favorite",
         element: <FavoritesPage />,
+      },
+      {
+        path: "/hotel_booking",
+        element: <Hotel_booking />,
+      },
+      {
+        path: "/hotel_details/:id",
+        element: <Hotel_details />,
+      },
+      {
+        path: "/hotel_details/:id/booking",
+        element: <Booking />,
+      },
+      {
+        path: "/availableRooms/products/:category",
+        element: <Available_rooms />,
       },
     ],
   },

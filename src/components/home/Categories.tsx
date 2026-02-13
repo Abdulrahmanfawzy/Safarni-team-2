@@ -15,7 +15,7 @@ const categories: Category[] = [
   { title: "Flight", image: flight, href: "/" },
   { title: "Cars", image: cars, href: "/" },
   { title: "Tours", image: tours, href: "/" },
-  { title: "Hotel", image: hotel, href: "/" },
+  { title: "Hotel", image: hotel, href: "/hotel_booking" },
 ];
 
 export function Categories() {
