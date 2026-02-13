@@ -46,9 +46,12 @@ export default function Navbar() {
           >
             <Search className="w-5 h-5 text-gray-600 " />
           </Link>
-          <div className="hover:bg-blue-200 rounded-full p-2 duration-300 cursor-pointer">
+          <Link
+            to={"/filter"}
+            className="hover:bg-blue-200 rounded-full p-2 duration-300 cursor-pointer"
+          >
             <SlidersHorizontal className="w-5 h-5 text-gray-600 cursor-pointer" />
-          </div>
+          </Link>
           <img
             src={Avatar}
             alt="user"

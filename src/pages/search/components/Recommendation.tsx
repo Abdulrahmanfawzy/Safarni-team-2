@@ -17,6 +17,7 @@ import delhi from "@/assets/search/elephant-1188556.png";
 import dhaka from "@/assets/search/dhaka-smriti-1188495.png";
 import istanbul from "@/assets/search/istanbul-1188499.png";
 import egypt from "@/assets/search/hiran-minar-1188486.png";
+import { Link } from "react-router-dom";
 
 export default function Recommendation() {
   const searchRecommendations = [
@@ -44,7 +45,11 @@ export default function Recommendation() {
     <section className="flex gap-2 flex-col">
       {searchRecommendations.map((r) => {
         return (
-          <div className="flex gap-4 py-4 cursor-pointer">
+          <Link
+            to={"/result"}
+            className="flex gap-4 py-4 cursor-pointer"
+            key={r.title}
+          >
             <div>
               <img src={r.img} alt={r.title} />
             </div>
@@ -52,7 +57,7 @@ export default function Recommendation() {
               <p className="font-medium text-[25px] text-gray-900">{r.title}</p>
               <p className="text-[25px] text-gray-500">{r.description}</p>
             </div>
-          </div>
+          </Link>
         );
       })}
     </section>

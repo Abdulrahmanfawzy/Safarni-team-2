@@ -14,6 +14,8 @@ import ForgetPass from "./pages/auth/ForgetPass";
 import Otp from "./pages/auth/Otp";
 import NewPass from "./pages/auth/NewPass";
 import Done from "./components/auth/Done";
+import ResultPage from "./components/common/Result";
+import FilterPage from "./pages/filter/Filter";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
       {
         path: "/search",
         element: <SearchPage />,
+      },
+      {
+        path: "/filter",
+        element: <FilterPage />,
+      },
+      {
+        path: "/result",
+        element: <ResultPage />,
       },
     ],
   },
@@ -48,7 +58,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/favorite",
+        path: "/profile/favorite",
         element: <FavoritesPage />,
       },
     ],

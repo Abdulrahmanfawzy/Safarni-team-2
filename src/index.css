@@ -161,11 +161,6 @@
     linear-gradient(90deg, #3f52b4, #b22459) border-box;
 }
 
-* {
-  box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
-}
-
 body {
   font-family: "Poppins", sans-serif;
 }

@@ -1,5 +1,5 @@
-import heroimg from "../../assets/images/heroimg.png"
-import arrow from "../../assets/images/Group.png"
+import heroimg from "../../assets/images/heroimg.png";
+import arrow from "../../assets/images/Group.png";
 
 export default function Hero() {
   return (
@@ -16,8 +16,9 @@ export default function Hero() {
             <img src={arrow} alt="arrow" className="h-16 md:h-auto" />
           </div>
           <p className=" mt-8 md:mt-7 text-gray-600 text-sm sm:text-lg w-fit leading-relaxed">
-            "Explore stunning destinations around the globe. Find travel inspiration,
-            top attractions, and plan your next adventure all from one platform."
+            "Explore stunning destinations around the globe. Find travel
+            inspiration, top attractions, and plan your next adventure all from
+            one platform."
           </p>
         </div>
       </div>
