@@ -15,6 +15,7 @@ const sortOptions: Option[] = [
   { label: "Most Reviewed", value: "most_reviewed" },
   { label: "Most Popular", value: "most_popular" },
 ];
+
 const adventureOptions: Option[] = [
   { label: "Adventure Travel", value: "adventure_travel" },
   { label: "Cite Breaks", value: "city_breaks" },
