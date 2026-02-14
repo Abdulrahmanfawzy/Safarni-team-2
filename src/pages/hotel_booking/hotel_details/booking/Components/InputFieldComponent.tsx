@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
     Field,
-    FieldLabel,
 } from "../../../../../components/ui/field";
 import {
     InputGroup,
@@ -21,7 +20,6 @@ export default function InputFieldComponent() {
     };
     return (
         <Field>
-            <FieldLabel htmlFor="block-end-textarea">Note To Owner</FieldLabel>
             <InputGroup
                 style={{
                     border:

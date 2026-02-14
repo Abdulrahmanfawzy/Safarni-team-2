@@ -55,7 +55,13 @@ export default function Booking() {
     return (
         <section className="lg:px-12 md:px-8 px-4 py-10 ">
             <button
-                onClick={() => navigate(-1)}
+                onClick={() => {
+                    if (!showBooking) {
+                        setShowBooking(true); 
+                    } else {
+                        navigate(-1);
+                    }
+                }}
                 className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer"
             >
                 <ChevronLeft />
@@ -99,14 +105,13 @@ export default function Booking() {
 
                     <h2 className="text-2xl font-bold mt-4">{data?.title}</h2>
                     <p className="text-gray-500">{data?.warrantyInformation}</p>
-
                     {showBooking ? (
                         <div className="mt-5">
                             <p className="text-center py-2 text-[#1E429F] font-bold">
                                 Book Room
                             </p>
 
-                            <p>Check In</p>
+                            <p className="font-semibold text-[#111928]">Check In</p>
                             <Carousel className="py-6">
                                 <CarouselContent className="flex lg:gap-4 md:gap-6 gap-8">
                                     {checkInDates.map((date, index) => {
@@ -144,7 +149,7 @@ export default function Booking() {
                                 </CarouselContent>
                             </Carousel>
 
-                            <p>Check Out</p>
+                            <p className="font-semibold text-[#111928]">Check Out</p>
                             <Carousel className="py-6">
                                 <CarouselContent className="flex lg:gap-4 md:gap-6 gap-8">
                                     {checkOutDates.map((date, index) => {
@@ -176,7 +181,8 @@ export default function Booking() {
                                     })}
                                 </CarouselContent>
                             </Carousel>
-
+                            <p className="text-[#111928]">Note To Owner</p>
+                            
                             <div className="py-5">
                                 <InputFieldComponent />
                             </div>
@@ -189,7 +195,7 @@ export default function Booking() {
                             </button>
                         </div>
                     ) : (
-                        <LastCheckOut />
+                        <LastCheckOut  />
                     )}
                 </div>
             </div>

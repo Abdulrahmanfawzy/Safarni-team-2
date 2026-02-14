@@ -1,6 +1,7 @@
 import { TravelCard } from '../../common/TravelCard';
 import { favoritesData } from './data';
 import BackButton from '../../ui/BackButton';
+
 const FavoritesPage = () => {
     return (
         <div className="mt-20 w-full min-h-screen bg-[#F8F9FB] pb-10">
@@ -14,8 +15,8 @@ const FavoritesPage = () => {
                     ))}
                 </div>
             </div>
+
         </div>
     );
-};
-
+}
 export default FavoritesPage;

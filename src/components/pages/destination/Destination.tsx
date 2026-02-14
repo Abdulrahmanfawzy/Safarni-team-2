@@ -6,6 +6,7 @@ import TopActivates from "./TopActivates";
 import VisitingTime from "./VisitingTime";
 import Gallery from "./Gallarey";
 import BookingBar from "./BookingBar";
+import BackButton from "../../ui/BackButton";
 export default function Destination() {
   const destinationData = {
     title: "Eiffel Tower",
@@ -18,7 +19,7 @@ export default function Destination() {
   };
   return (
     <section className="max-w-7xl mx-auto px-4 lg:px-25 py-8">
-      <ChevronLeft className="w-8 h-8 bg-[#F3F4F6] rounded-full cursor-pointer mb-8" />
+      <BackButton />
       <TravelCard {...destinationData} />
       <TopActivates />
       <VisitingTime />
