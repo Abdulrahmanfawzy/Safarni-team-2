@@ -10,13 +10,13 @@ export default function HotelCardNearBySection({ product }: { product: any }) {
             className="p-3 rounded-2xl lg:w-4/10 w-full md:flex gap-4 
                        items-center justify-between 
                        bg-white hover:shadow-lg 
-                       transition-all duration-300 hover:-translate-y-1"
+                       transition-all duration-300 hover:-translate-y-1 "
         >
             {/* Image */}
             {product.thumbnail ? (
                 <img
                     src={product.thumbnail}
-                    className="rounded-2xl lg:w-3/12 h-40 object-cover"
+                    className="rounded-2xl lg:w-3/12 w-full h-40 object-cover"
                     alt={product.title}
                 />
             ) : (
@@ -40,7 +40,6 @@ export default function HotelCardNearBySection({ product }: { product: any }) {
                 </p>
             </div>
 
-            {/* Rating */}
             <div className="flex items-center gap-1 text-sm font-medium">
                 <Star size={16} fill="#FACC15" className="text-[#FACC15]" />
                 <p>{product.rating}</p>

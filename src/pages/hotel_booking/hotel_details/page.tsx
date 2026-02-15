@@ -38,7 +38,7 @@ export default function Hotel_details() {
 
     return (
         <section className="lg:px-12 md:px-8 px-4">
-                <button onClick={() => navigate(-1)} role="button"   className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer">
+                <button onClick={() => navigate(-1)} role="button" className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer">
                     <ChevronLeft />
                 </button>
 
@@ -100,7 +100,6 @@ export default function Hotel_details() {
 
                     <p className="text-gray-500">{data.warrantyInformation}</p>
 
-                    {/* هنا التبديل الحقيقي */}
                     {reviewing ? (
                         <>
                             <Tabs
