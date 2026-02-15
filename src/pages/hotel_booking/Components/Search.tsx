@@ -1,6 +1,6 @@
 import { ChevronLeft, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function SearchHotel({
     products = [],
@@ -29,7 +29,6 @@ export default function SearchHotel({
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
-    const navigate = useNavigate();
     return (
         <div
             ref={wrapperRef}
