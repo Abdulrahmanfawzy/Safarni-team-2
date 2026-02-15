@@ -1,6 +1,6 @@
 import { ChevronLeft, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SearchHotel({
     products = [],
@@ -36,12 +36,12 @@ export default function SearchHotel({
             className="flex flex-col relative gap-4 items-center justify-center w-full"
         >
             <div className="flex items-center gap-5 justify-between w-full">
-                <button
-                    onClick={() => navigate(-3)}
+                <Link
+                    to="/"
                     className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer"
                 >
                     <ChevronLeft />
-                </button>
+                </Link>
 
                 <div className="border-2 w-full flex items-center gap-4 border-gray-100 rounded-2xl px-3 py-3 relative">
                     <Search className="text-gray-400" />
