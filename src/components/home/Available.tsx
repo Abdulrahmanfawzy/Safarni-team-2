@@ -1,5 +1,6 @@
 import { Star } from "lucide-react";
 import available from "../../assets/images/Available.png"
+import { Link } from "react-router-dom";
 
 type Tour = {
   title: string;
@@ -40,14 +41,14 @@ export function AvailableTours() {
     <section className="mt-10 ">
       <div className="mb-4 flex items-center justify-between">
         <h2 className="text-2xl font-semibold">Available Tours</h2>
-        <button className="text-sm text-blue-600">View all</button>
+        <Link to="/destination" className="text-sm font-semibold text-blue-700">View all</Link>
       </div>
 
 
       <div className=" w-full grid grid-cols-1 md:grid-cols-2 gap-6">
         {tours.map((tour) => (
-          <div key={tour.title} className="flex gap-4 rounded-2xl bg-white p-4 shadow cursor-pointer hover:scale-95 duration-300">
-            <img src={tour.image} alt={tour.title} className="h-20 w-20 rounded-xl object-cover" />
+          <div key={tour.title} className="flex items-center gap-4 rounded-2xl bg-white p-4 shadow cursor-pointer hover:scale-95 duration-300">
+            <img src={tour.image} alt={tour.title} className="h-24 w-24 rounded-xl object-cover" />
             <div className="flex flex-1 justify-between">
               <div>
                 <span className="text-sm font-semibold text-gray-500">Full Day Tour</span>

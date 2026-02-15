@@ -30,9 +30,9 @@ export function Categories() {
           <Link
             to={cat.href}
             key={cat.title}
-            className="flex shrink-0 flex-col items-center gap-4 hover:scale-95 duration-200"
+            className="flex shrink-0 flex-col items-center gap-2 sm:gap-4 hover:scale-95 duration-200"
           >
-            <div className=" max-w-16 sm:max-w-36 lg:max-w-40 xl:max-w-60 rounded-full ">
+            <div className=" max-w-12 sm:max-w-36 lg:max-w-40 xl:max-w-60 rounded-full ">
               <img
                 src={cat.image}
                 alt={cat.title}
@@ -40,7 +40,7 @@ export function Categories() {
               />
             </div>
 
-            <span className="text-lg sm:text-xl md:text-2xl font-medium text-blue-600">
+            <span className="text-[17px] sm:text-xl md:text-2xl font-medium text-blue-600">
               {cat.title}
             </span>
           </Link>

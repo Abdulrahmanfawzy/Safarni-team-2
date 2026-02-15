@@ -13,7 +13,7 @@ interface RcmdCardCardSectionProps {
 
 const RcmdCard = ({ data }: RcmdCardCardSectionProps) => {
   return (
-    <div className="flex items-center overflow-hidden overflow-x-auto scroll-smooth scrollbar-hide pb-6 md:overflow-x-visible gap-5 lg:gap-8">
+    <div className="flex items-center overflow-hidden overflow-x-auto scroll-smooth no-scrollbar pb-6 md:overflow-x-visible gap-5 ">
       {data.map((item) => (
         <div
           key={item.title}

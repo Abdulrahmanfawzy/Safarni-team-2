@@ -41,9 +41,8 @@ export function Recommendation() {
     <section className="mt-10">
       <div className="mb-4 flex items-center justify-between">
         <h2 className="text-2xl font-semibold">Recommendation</h2>
-        <Link to="/destination" className="text-sm text-blue-600">View all</Link>
+        <Link to="/destination" className="text-sm font-semibold text-blue-700">View all</Link>
       </div>
-
       <RcmdCard data={recommendations} />
     </section>
   );
