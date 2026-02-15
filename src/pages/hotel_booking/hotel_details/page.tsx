@@ -42,8 +42,8 @@ export default function Hotel_details() {
                     <ChevronLeft />
                 </button>
 
-            <div className="mt-4 flex justify-center lg:gap-15 md:gap-10 gap-5 items-start flex-wrap">
-                <div className="lg:w-5/12 md:w-8/12 w-full relative">
+            <div className="mt-4 lg:flex grid justify-center lg:gap-15 md:gap-10 gap-5 items-start flex-wrap">
+                <div className="lg:w-5/12 w-full relative">
                     {data?.thumbnail && (
                         <img
                             src={data.thumbnail}
@@ -52,7 +52,7 @@ export default function Hotel_details() {
                         />
                     )}
                     {data?.thumbnail && (
-                        <div className="md:grid hidden grid-cols-5 w-125 bg-white rounded-2xl p-3 absolute bottom-10 left-1/2 transform -translate-x-1/2  gap-5">
+                        <div className="md:grid hidden grid-cols-5 md:w-125  bg-white rounded-2xl p-3 absolute bottom-10 left-1/2 transform -translate-x-1/2  gap-5">
                             {Array.from({ length: 5 }).map((_, index) => (
                                 <img
                                     key={index}
@@ -84,7 +84,7 @@ export default function Hotel_details() {
                     </div>
                 </div>
 
-                <div className="lg:w-5/12 md:w-4/12 w-full flex flex-col">
+                <div className="lg:w-5/12 w-full flex flex-col">
                     <div className="flex justify-between">
                         <div className="flex gap-1">
                             <Star fill="#FACC15" className="text-[#FACC15]" />

@@ -67,8 +67,8 @@ export default function Booking() {
                 <ChevronLeft />
             </button>
 
-            <div className="mt-4 flex justify-center lg:gap-15 md:gap-10 gap-5 items-start flex-wrap">
-                <div className="lg:w-5/12 md:w-8/12 w-full relative">
+            <div className="mt-4 md:flex grid justify-center lg:gap-15 md:gap-10 gap-5 items-start flex-wrap">
+                <div className="lg:w-5/12 w-full relative">
                     {data?.thumbnail && (
                         <>
                             <img
@@ -91,7 +91,7 @@ export default function Booking() {
                     )}
                 </div>
 
-                <div className="lg:w-5/12 md:w-4/12 w-full flex flex-col">
+                <div className="lg:w-5/12 w-full flex flex-col">
                     <div className="flex justify-between">
                         <div className="flex gap-1">
                             <Star fill="#FACC15" className="text-[#FACC15]" />

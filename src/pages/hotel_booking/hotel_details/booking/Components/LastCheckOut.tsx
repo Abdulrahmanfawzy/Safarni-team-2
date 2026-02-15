@@ -11,7 +11,7 @@ export default function LastCheckOut() {
     const [counter2, setCounter2] = useState(0);
     const [counter3, setCounter3] = useState(0);
     return (
-        <div className="flex flex-col gap-5 justify-center items-center md:w-9/12 w-full">
+        <div className="flex flex-col gap-5 justify-center items-center lg:w-9/12 w-full">
             <div className="flex justify-between items-center w-full">
                 <div>
                     <p>Adults</p>
