@@ -22,6 +22,7 @@ import Booking from "./pages/hotel_booking/hotel_details/booking/page";
 import PaymentPage from "./components/pages/payment/PaymentPage";
 import PaymentSuccess from "./components/pages/payment/PaymentSuccess";
 import FilterPage from "./pages/filter/Filter";
+import ResultPage from "./components/common/ResultPage";
 
 const router = createBrowserRouter([
   {
@@ -90,6 +91,10 @@ const router = createBrowserRouter([
       {
         path: "/availableRooms/products/:category",
         element: <Available_rooms />,
+      },
+      {
+        path: "/result",
+        element: <ResultPage />,
       },
     ],
   },

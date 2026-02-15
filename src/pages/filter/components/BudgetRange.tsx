@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import Slider from "@mui/material/Slider";
 import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer } from "recharts";
+import SectionHeading from "../../../components/common/SectionHeading";
 
 type Point = { x: number; y: number };
 
@@ -41,8 +42,7 @@ export default function BudgetRange() {
 
   return (
     <div>
-      <h3 className="text-[24px] font-semibold text-gray-800">Budget Range</h3>
-
+      <SectionHeading content="Budget Range" />
       {/* container */}
       <div className="relative h-30 rounded-2xl mt-12">
         {/* wave background */}
@@ -91,17 +91,13 @@ export default function BudgetRange() {
 
       <div className="mt-4 flex items-start justify-between">
         <div className="flex flex-col gap-2">
-          <div className="text-[30px] font-medium text-gray-500">Min</div>
-          <div className="text-2xl font-semibold text-gray-900">
-            ${range[0]}
-          </div>
+          <div className="text-xl font-medium text-gray-500">Min</div>
+          <div className="text-xl font-semibold text-gray-900">${range[0]}</div>
         </div>
 
         <div className="flex flex-col gap-2 text-right">
-          <div className="text-[30px] font-medium text-gray-500">Max</div>
-          <div className="text-2xl font-semibold text-gray-900">
-            ${range[1]}
-          </div>
+          <div className="text-xl font-medium text-gray-500">Max</div>
+          <div className="text-xl font-semibold text-gray-900">${range[1]}</div>
         </div>
       </div>
     </div>

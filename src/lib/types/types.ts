@@ -11,4 +11,4 @@ export type AdventureStyleValue =
   | "water_activity"
   | "road_trips";
 
-export type Option = { label: string; value: SortValue | AdventureStyleValue };
+export type RatingValue = "1" | "2" | "3" | "4" | "5";
