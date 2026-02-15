@@ -67,28 +67,46 @@ export default function Booking() {
                 <ChevronLeft />
             </button>
 
-            <div className="mt-4 md:flex grid justify-center lg:gap-15 md:gap-10 gap-5 items-start flex-wrap">
+            <div className="mt-4 flex md:flex-row flex-col justify-center lg:gap-15 md:gap-10 gap-5 items-start flex-wrap">
                 <div className="lg:w-5/12 w-full relative">
                     {data?.thumbnail && (
-                        <>
-                            <img
-                                src={data.thumbnail}
-                                alt={data.title}
-                                className="rounded-2xl w-full"
-                            />
-
-                            <div className="md:grid hidden grid-cols-5 w-full bg-white rounded-2xl p-3 absolute bottom-0 left-1/2 -translate-x-1/2 gap-5">
-                                {Array.from({ length: 5 }).map((_, index) => (
-                                    <img
-                                        key={index}
-                                        src={data.thumbnail}
-                                        alt={data.title}
-                                        className="rounded-2xl w-full cursor-pointer"
-                                    />
-                                ))}
-                            </div>
-                        </>
+                        <img
+                            src={data.thumbnail}
+                            alt={data.title}
+                            className="rounded-2xl w-full md:block hidden"
+                        />
                     )}
+                    {data?.thumbnail && (
+                        <div className="md:grid hidden grid-cols-5 md:w-125  bg-white rounded-2xl p-3 absolute bottom-10 left-1/2 transform -translate-x-1/2  gap-5">
+                            {Array.from({ length: 5 }).map((_, index) => (
+                                <img
+                                    key={index}
+                                    src={data.thumbnail}
+                                    alt={data.title}
+                                    className="rounded-2xl w-full cursor-pointer"
+                                />
+                            ))}
+                        </div>
+                    )}
+                    <div className="md:hidden block">
+                        {data?.thumbnail && (
+                            <Carousel opts={{ loop: true }}>
+                                <CarouselContent>
+                                    {Array.from({ length: 5 }).map(
+                                        (_, index) => (
+                                            <CarouselItem key={index}>
+                                                <img
+                                                    src={data.thumbnail}
+                                                    alt={data.title}
+                                                    className="rounded-2xl w-full"
+                                                />
+                                            </CarouselItem>
+                                        ),
+                                    )}
+                                </CarouselContent>
+                            </Carousel>
+                        )}
+                    </div>
                 </div>
 
                 <div className="lg:w-5/12 w-full flex flex-col">

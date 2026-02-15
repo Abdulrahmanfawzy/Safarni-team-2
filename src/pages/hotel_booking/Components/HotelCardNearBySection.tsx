@@ -7,10 +7,10 @@ export default function HotelCardNearBySection({ product }: { product: any }) {
         <Link
             to={`/availableRooms/products/${product.category}`}
             style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.08)" }}
-            className="p-3 rounded-2xl lg:w-4/10 w-full md:flex gap-4 
-                       items-center justify-between 
+            className="p-3 rounded-2xl lg:w-7/15 w-full md:flex gap-4 
+                       items-center justify-start 
                        bg-white hover:shadow-lg 
-                       transition-all duration-300 hover:-translate-y-1 "
+                       transition-all duration-300 hover:-translate-y-1"
         >
             {/* Image */}
             {product.thumbnail ? (
@@ -25,8 +25,10 @@ export default function HotelCardNearBySection({ product }: { product: any }) {
 
             {/* Content */}
             <div className="flex-1 flex flex-col gap-2">
-                <span className="bg-blue-100 text-blue-700 text-xs font-semibold 
-                                 rounded-full px-3 py-1 w-fit">
+                <span
+                    className="bg-blue-100 text-blue-700 text-xs font-semibold 
+                                 rounded-full px-3 py-1 w-fit"
+                >
                     %{Math.round(product.discountPercentage)} Off
                 </span>
 
