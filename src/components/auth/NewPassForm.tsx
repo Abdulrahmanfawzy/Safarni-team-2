@@ -9,7 +9,11 @@ import { z } from "zod";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function NewPassForm() {
+export default function NewPassForm({
+  handleSuccess,
+}: {
+  handleSuccess: () => void;
+}) {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const {
@@ -21,6 +25,7 @@ export default function NewPassForm() {
   });
   const onSubmit = (data: z.infer<typeof newPassSchema>) => {
     console.log(data);
+    handleSuccess();
   };
 
   const showPasswordHandler = () => {
