@@ -1,4 +1,5 @@
 import { MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function SearchResults() {
   const results = [
@@ -11,16 +12,17 @@ export default function SearchResults() {
     <section className="flex gap-6 flex-col">
       {results.map((r) => {
         return (
-          <div className="flex gap-4 items-center cursor-pointer">
+          <Link
+            to={"/result"}
+            className="flex gap-4 items-center cursor-pointer"
+          >
             <div className="bg-(--secondary-blue) rounded-xl py-3 px-4">
-              <MapPin
-                stroke="var(--primary-blue)"
-                width={43.75}
-                height={52.5}
-              />
+              <MapPin stroke="var(--primary-blue)" size={42} />
             </div>
-            <p className="font-medium text-[25px] text-gray-900 ">{r}</p>
-          </div>
+            <p className="font-medium text-xl lg:text-[22px] text-gray-900 ">
+              {r}
+            </p>
+          </Link>
         );
       })}
     </section>
