@@ -1,12 +1,7 @@
 import * as ToggleGroup from "@radix-ui/react-toggle-group";
-import type {
-  AdventureStyleValue,
-  Option,
-  SortValue,
-} from "../../../lib/types/types";
 import { Star } from "lucide-react";
-
-type RatingValue = "1" | "2" | "3" | "4" | "5";
+import type { RatingValue } from "../../../lib/types/types";
+import SectionHeading from "../../../components/common/SectionHeading";
 
 const options: { value: RatingValue }[] = [
   { value: "1" },
@@ -19,16 +14,16 @@ export function RatingChips({
   value,
   onChange,
 }: {
-  value: SortValue | AdventureStyleValue;
-  onChange: (v: RatingValue) => void;
+  value: RatingValue[];
+  onChange: (v: RatingValue[]) => void;
 }) {
   return (
     <div className="space-y-3">
-      <p className="text-[24px] font-semibold text-gray-800">Rating</p>
+      <SectionHeading content="Rating" />
       <ToggleGroup.Root
         type="multiple"
         value={value}
-        onValueChange={(v) => onChange(v as RatingValue)}
+        onValueChange={(v) => onChange(v as RatingValue[])}
         className="flex flex-wrap gap-4 py-4 md:justify-between"
       >
         {options.map((opt) => (
@@ -43,14 +38,12 @@ export function RatingChips({
               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
             ].join(" ")}
           >
-            <div className="flex gap-2">
+            <div className="flex gap-1">
               <Star
-                size={35}
                 strokeWidth={1}
-                className="stroke-[#4B5563] group-data-[state=on]:stroke-(--primary-blue)
-"
+                className="stroke-[#4B5563] group-data-[state=on]:stroke-(--primary-blue) size-6.5"
               />
-              <p className="font-medium text-[26px] ">{opt.value}</p>
+              <p className="font-medium text-lg lg:text-xl">{opt.value}</p>
             </div>
           </ToggleGroup.Item>
         ))}
