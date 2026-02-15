@@ -13,7 +13,6 @@ import SignUp from "./pages/auth/SignUp";
 import ForgetPass from "./pages/auth/ForgetPass";
 import Otp from "./pages/auth/Otp";
 import NewPass from "./pages/auth/NewPass";
-import Done from "./components/auth/Done";
 import AccountSecurity from "./pages/profile/AccountSecurity";
 import Hotel_booking from "./pages/hotel_booking/page";
 import Hotel_details from "./pages/hotel_booking/hotel_details/page";
@@ -121,10 +120,6 @@ const router = createBrowserRouter([
   {
     path: "new-pass",
     element: <NewPass />,
-  },
-  {
-    path: "done",
-    element: <Done />,
   },
 ]);
 

@@ -9,8 +9,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+// import { useRegister } from "../../hooks/authHooks";
 
 export default function SignupForm() {
+  // const { mutate } = useRegister();
   const [showPassword, setShowPassword] = useState(false);
   const {
     register,
@@ -19,6 +21,7 @@ export default function SignupForm() {
   } = useForm({
     resolver: zodResolver(signupSchema),
   });
+
   const onSubmit = (data: z.infer<typeof signupSchema>) => {
     console.log(data);
   };
@@ -49,6 +52,9 @@ export default function SignupForm() {
               size={18}
             />
           </div>
+          {errors.name && (
+            <p className="text-[#fb464f] text-[14px]">{errors.name.message}</p>
+          )}
         </div>
         <div className="email flex flex-col gap-2">
           <Label
@@ -70,6 +76,9 @@ export default function SignupForm() {
               size={18}
             />
           </div>
+          {errors.email && (
+            <p className="text-[#fb464f] text-[14px]">{errors.email.message}</p>
+          )}
         </div>
         <div className="password flex flex-col gap-2">
           <Label
@@ -104,6 +113,11 @@ export default function SignupForm() {
               />
             )}
           </div>
+          {errors.password && (
+            <p className="text-[#fb464f] text-[14px]">
+              {errors.password.message}
+            </p>
+          )}
         </div>
         <div className="confirm flex flex-col justify-between gap-3">
           <div className="rules flex flex-col gap-2">
