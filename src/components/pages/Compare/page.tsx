@@ -12,7 +12,7 @@ const ComparePage = () => {
                     <div className="shrink-0">
                         <BackButton />
                     </div>
-                    <div className="relative w-full flex-row">
+                    <div className="relative w-full flex-row mb-4">
                         <Search className="absolute left-4 top-1/2 -translate-y-2/3 text-gray-400 w-5 h-5" />
                         <input
                             type="text"

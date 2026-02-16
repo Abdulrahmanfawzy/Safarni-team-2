@@ -1,7 +1,6 @@
 
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { cars } from "./data/Cars";
-import Button from "../cars/Button";
 import BackButton from "../ui/BackButton";
 import PlanCard from "./PlanCard";
 import { useState } from "react";
@@ -24,7 +23,7 @@ export default function CarDetailsPage() {
           <img src={car.image} className="max-w-full " />
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-3 ">
 
           <h2 className="text-2xl font-bold">Popular Cars</h2>
 
@@ -66,7 +65,11 @@ export default function CarDetailsPage() {
             </div>
           </div>
 
-          <Button >Pick Up</Button>
+          <Link to="/payment" className=" w-full flex items-center justify-center px-4 py-2 rounded-sm font-medium transition cursor-pointer
+            bg-blue-800 text-white hover:bg-blue-900"
+          >
+            Pick Up
+          </Link>
         </div>
       </div>
     </section>

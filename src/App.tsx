@@ -114,6 +114,10 @@ const router = createBrowserRouter([
         path: "/result",
         element: <ResultPage />,
       },
+      {
+        path: "Flight_booking",
+        element: <Flight_page />
+      }
     ],
   },
   {
@@ -140,10 +144,6 @@ const router = createBrowserRouter([
     path: "new-pass",
     element: <NewPass />,
   },
-  {
-    path: "Flight_booking", 
-    element:<Flight_page/>
-  }
 ]);
 
 const App = () => {
