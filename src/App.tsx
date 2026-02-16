@@ -23,6 +23,7 @@ import PaymentPage from "./components/pages/payment/PaymentPage";
 import PaymentSuccess from "./components/pages/payment/PaymentSuccess";
 import FilterPage from "./pages/filter/Filter";
 import ResultPage from "./components/common/ResultPage";
+import Flight_page from "./pages/Flight_booking/Flight_page";
 
 const router = createBrowserRouter([
   {
@@ -127,6 +128,10 @@ const router = createBrowserRouter([
     path: "new-pass",
     element: <NewPass />,
   },
+  {
+    path: "Flight_booking", 
+    element:<Flight_page/>
+  }
 ]);
 
 const App = () => {

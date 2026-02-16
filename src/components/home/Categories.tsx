@@ -12,7 +12,7 @@ type Category = {
 };
 
 const categories: Category[] = [
-  { title: "Flight", image: flight, href: "/" },
+  { title: "Flight", image: flight, href: "/Flight_booking" },
   { title: "Cars", image: cars, href: "/" },
   { title: "Tours", image: tours, href: "/" },
   { title: "Hotel", image: hotel, href: "/hotel_booking" },
