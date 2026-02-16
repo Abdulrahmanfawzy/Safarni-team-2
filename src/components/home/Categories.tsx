@@ -13,7 +13,7 @@ type Category = {
 
 const categories: Category[] = [
   { title: "Flight", image: flight, href: "/" },
-  { title: "Cars", image: cars, href: "/" },
+  { title: "Cars", image: cars, href: "/cars" },
   { title: "Tours", image: tours, href: "/" },
   { title: "Hotel", image: hotel, href: "/hotel_booking" },
 ];

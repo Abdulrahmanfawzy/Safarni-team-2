@@ -23,6 +23,8 @@ import PaymentPage from "./components/pages/payment/PaymentPage";
 import PaymentSuccess from "./components/pages/payment/PaymentSuccess";
 import FilterPage from "./pages/filter/Filter";
 import ResultPage from "./components/common/ResultPage";
+import Cars from "./pages/Cars.tsx";
+import CarDetailsPage from "./components/cars/CarDetailsPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +55,16 @@ const router = createBrowserRouter([
       {
         path: "/filter",
         element: <FilterPage />,
+      },
+
+      {
+        path: "/cars",
+        element: <Cars />,
+      },
+
+      {
+        path: "/cars/:id",
+        element: <CarDetailsPage />,
       },
 
       {

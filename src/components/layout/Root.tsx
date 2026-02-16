@@ -5,7 +5,7 @@ function Root() {
   return (
     <div>
       <Navbar />
-      <div className="mt-18 md:mt-24">
+      <div className="mt-18 lg:mt-24">
         <Outlet />
       </div>
     </div>
