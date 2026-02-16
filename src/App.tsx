@@ -25,6 +25,7 @@ import FilterPage from "./pages/filter/Filter";
 import ResultPage from "./components/common/ResultPage";
 import Cars from "./pages/Cars.tsx";
 import CarDetailsPage from "./components/cars/CarDetailsPage.tsx";
+import Flight_page from "./pages/Flight_booking/Flight_page";
 
 const router = createBrowserRouter([
   {
@@ -139,6 +140,10 @@ const router = createBrowserRouter([
     path: "new-pass",
     element: <NewPass />,
   },
+  {
+    path: "Flight_booking", 
+    element:<Flight_page/>
+  }
 ]);
 
 const App = () => {
