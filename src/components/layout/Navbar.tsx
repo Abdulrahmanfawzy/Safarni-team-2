@@ -12,7 +12,7 @@ export default function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/favorite", label: "Favorite" },
-    // { href: "/compare", label: "Compare" },
+    { href: "/compare", label: "Compare" },
     // { href: "/maps", label: "Maps" },
   ];
 
