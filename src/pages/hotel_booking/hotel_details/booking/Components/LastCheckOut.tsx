@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
     Dialog,
     DialogContent,
@@ -156,9 +157,9 @@ export default function LastCheckOut() {
                             </span>
                         </div>
                     </div>
-                    <button className="bg-[#1E429F] text-white w-full py-4 rounded-xl cursor-pointer">
+                    <Link to="/payment" className="bg-[#1E429F] text-white text-center w-full py-4 rounded-xl cursor-pointer">
                         Book Now
-                    </button>
+                    </Link>
                 </DialogContent>
             </Dialog>
         </div>
