@@ -22,7 +22,7 @@ const ComparePage = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                     {toursData.slice(0, 6).map((item) => (
                         <div key={item.id} className="bg-[#FAFAFA] p-5 shadow-sm border border-gray-50 flex gap-6 hover:shadow-md transition-all group">
                             <div className="w-35 h-35 overflow-hidden shrink-0">
@@ -55,10 +55,10 @@ const ComparePage = () => {
                                 ${selectedCard === item.id ? 'border-blue-500 shadow-md' : 'border-gray-50'}`}
                         >
                             <div className="mb-6">
-                                <h3 className="font-bold text-[18px]">{item.title}</h3>
+                                <h3 className="font-medium text-[18px]">{item.title}</h3>
                                 <div className="flex items-baseline gap-1">
                                     <span className="text-[28px] font-black">${item.price}</span>
-                                    <span className="text-[#999999] text-sm">/person</span>
+                                    <span className="text-[#999999] text-lg">/person</span>
                                 </div>
                             </div>
                             <div className="space-y-3">
