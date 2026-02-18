@@ -61,7 +61,6 @@ const ComparePage = () => {
                                     <span className="text-[#999999] text-sm">/person</span>
                                 </div>
                             </div>
-                            {/* Features ... */}
                             <div className="space-y-3">
                                 {Object.entries(item.features).map(([key, value]) => (
                                     <div key={key} className="flex items-start gap-3 text-[14px]">
@@ -75,7 +74,7 @@ const ComparePage = () => {
                 </div>
 
                 <div className="flex justify-center mt-10 w-full">
-                    <button className={`w-full max-w-[550px] py-4 font-bold text-[18px] transition-all duration-300
+                    <button className={`w-full max-w-137.5 py-4 font-bold text-[18px] transition-all duration-300
                         ${selectedCard !== null
                             ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200 shadow-lg'
                             : 'bg-[#667681] text-white opacity-70 cursor-not-allowed'}`}
